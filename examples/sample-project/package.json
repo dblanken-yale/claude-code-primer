@@ -1,0 +1,8 @@
+{
+  "name": "primer-sample-project",
+  "version": "1.0.0",
+  "description": "A tiny sample project for practicing Claude Code in the Claude Code Primer.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,48 @@
+<!--
+  TEMPLATE: personal global memory file.
+  The instructor copies this to ~/.claude/CLAUDE.md and fills it in WITH the user,
+  removing sections that don't apply. Keep the final file under ~200 lines and
+  specific. Delete these comment blocks before writing the real file.
+
+  GUARDRAIL: never put secrets (keys, passwords, tokens) in this file.
+-->
+
+# Personal Claude Code Preferences
+
+Global instructions that apply to all my projects.
+
+## About me
+
+<!-- One or two lines: role, primary languages/stack. -->
+- Role:
+- Primary languages / frameworks:
+
+## Coding standards
+
+<!-- Concrete, verifiable rules. "Use 2-space indentation" not "format properly". -->
+-
+-
+
+## Workflow
+
+<!-- Commands you run constantly; how you like changes verified. -->
+- Before considering a change done:
+- Commit style:
+- Testing:
+
+## Tools I use
+
+<!-- CLIs and tools Claude should know you have (e.g. gh, docker, pnpm). -->
+-
+
+## Things to always do / never do
+
+<!-- Capture the corrections you find yourself repeating. -->
+- Always:
+- Never:
+
+## Notes
+<!--
+  Tip: as standards pile up for a specific file type, move them into a path-scoped
+  rule in ~/.claude/rules/ instead of growing this file. See lesson 02.
+-->
