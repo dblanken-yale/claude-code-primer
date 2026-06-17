@@ -23,8 +23,7 @@ link you to the relevant page whenever you want to go deeper.
 
 - **Claude Code installed and authenticated.** If you're not set up yet, start at
   the official docs: https://code.claude.com/docs/en/overview
-- Comfort with a terminal and `git` (you're an engineer in the pilot — you've got
-  this).
+- Comfort with a terminal and `git`
 - About 45–60 minutes for the full course. You can also do it in pieces; Claude
   tracks your progress and can resume later.
 
@@ -105,3 +104,5 @@ This course follows the Yale pilot's guardrails: keep data to medium risk or low
 never put secrets (keys, passwords, tokens) into prompts or files, and use any
 Claude model except Fable. Claude will remind you of these as relevant. See Lesson
 12 for the full rundown.
+
+Created with AI
