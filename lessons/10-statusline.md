@@ -37,6 +37,12 @@ displays its output:
 
 The command runs frequently, so it must be fast — keep any script lightweight.
 
+> Platform note: the `bash …` example above is for macOS/Linux. On Windows the
+> `command` must be one your shell can run (e.g. a PowerShell command or a `.cmd`
+> script) — `bash` may not exist. Easiest cross-platform path: just run
+> `/statusline` and let the wizard configure it for your system. See the docs'
+> Windows status-line guidance.
+
 ## Guided hands-on
 
 Have the user run `/statusline` and pick something they like. If they want a custom

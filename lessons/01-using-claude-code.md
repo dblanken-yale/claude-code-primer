@@ -73,14 +73,15 @@ Set up the user's workspace now, picking whichever case fits:
 - **They have no project, or want a throwaway**: the primer ships a tiny sample
   project at `examples/sample-project/`. Copy it *out* of the primer to a scratch
   location, then add that — so practice never touches anything real and survives
-  deleting the primer:
+  deleting the primer. Use the command for **their OS** (or just recreate the few
+  files there with the Write tool, which works the same everywhere):
 
-  ```bash
-  cp -R examples/sample-project ~/primer-sandbox
-  ```
+  - macOS / Linux: `cp -R examples/sample-project ~/primer-sandbox`
+  - Windows (PowerShell): `Copy-Item examples\sample-project "$env:USERPROFILE\primer-sandbox" -Recurse`
 
-  then `/add-dir ~/primer-sandbox`. (Offer to run the copy for them; in dry-run mode,
-  describe these steps instead of running them.)
+  then `/add-dir <that path>` (`~/primer-sandbox`, or `%USERPROFILE%\primer-sandbox`
+  on Windows). Offer to run the copy for them, matching their shell; in dry-run mode,
+  describe these steps instead of running them.
 
 Confirm access with a quick read, e.g. ask Claude to show the workspace's `README.md`.
 

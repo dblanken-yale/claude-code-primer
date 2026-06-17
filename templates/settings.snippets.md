@@ -4,6 +4,12 @@ Copy-ready fragments for `~/.claude/settings.json` (personal) or a project's
 `.claude/settings.json`. **Merge** these into an existing `settings.json` rather
 than overwriting the whole file — keep the surrounding JSON valid.
 
+> Platform note: `~/.claude/settings.json` is at `%USERPROFILE%\.claude\settings.json`
+> on Windows. The `permissions` and `model` snippets are pure JSON and work as-is on
+> every OS. The **hook** and **status line** snippets below contain shell `command`
+> strings written for **macOS/Linux** (bash, `jq`); on native Windows (PowerShell),
+> keep the same JSON structure but use the PowerShell equivalent for the `command`.
+
 Official reference: https://code.claude.com/docs/en/settings
 
 ---

@@ -27,6 +27,12 @@ link you to the relevant page whenever you want to go deeper.
 - About 45–60 minutes for the full course. You can also do it in pieces; Claude
   tracks your progress and can resume later.
 
+**Works on Windows, macOS, and Linux.** Claude places your config in the right spot
+for your OS automatically: `~/.claude/` on macOS/Linux, and `%USERPROFILE%\.claude\`
+(e.g. `C:\Users\You\.claude\`) on Windows. The course's instructor adapts its shell
+commands to your platform; the few commands in this README are shown for both
+macOS/Linux and Windows PowerShell.
+
 ## How to start
 
 1. Clone this repo and `cd` into it:
@@ -81,22 +87,34 @@ hands-on writing to your own `~/.claude/`. Options, easiest first:
    it's backed up by the fact that Claude Code prompts before any file write and
    `~/.claude` is a protected path that always prompts — you can simply decline.
 2. **Back up and restore (verifies the real write path).**
+
+   macOS / Linux (bash):
    ```bash
    cp -a ~/.claude ~/.claude.primer-bak        # snapshot
    # ...run the primer for real, let it write files...
    rm -rf ~/.claude && mv ~/.claude.primer-bak ~/.claude   # restore
    ```
-3. **Throwaway HOME (fully isolated; also simulates a brand-new user).**
-   ```bash
-   mkdir -p /tmp/primer-home
-   HOME=/tmp/primer-home claude               # run from inside this repo
+
+   Windows (PowerShell):
+   ```powershell
+   Copy-Item "$env:USERPROFILE\.claude" "$env:USERPROFILE\.claude.primer-bak" -Recurse
+   # ...run the primer for real, let it write files...
+   Remove-Item "$env:USERPROFILE\.claude" -Recurse -Force
+   Rename-Item "$env:USERPROFILE\.claude.primer-bak" -NewName ".claude"
    ```
-   Note: credentials may live under your real `~/.claude` or the OS keychain, so this
-   may require re-authenticating for the test session.
+3. **Throwaway HOME (fully isolated; also simulates a brand-new user).** macOS / Linux:
+   ```bash
+   mkdir -p ~/primer-home
+   HOME=~/primer-home claude                   # run from inside this repo
+   ```
+   Credentials may live under your real `~/.claude` or the OS keychain, so this may
+   require re-authenticating for the test session. On **Windows** this home-redirect
+   trick is unreliable — prefer dry-run mode or the backup/restore above.
 
 For the parts that reach outside `~/.claude/` (driving a real task; `/init` creating
-a project `CLAUDE.md`), use a scratch repo so no real project is touched:
-`mkdir /tmp/primer-scratch && cd /tmp/primer-scratch && git init`.
+a project `CLAUDE.md`), use a scratch directory so no real project is touched —
+macOS/Linux: `mkdir -p ~/primer-scratch && cd ~/primer-scratch && git init`;
+Windows PowerShell: `New-Item -ItemType Directory "$env:USERPROFILE\primer-scratch"; cd "$env:USERPROFILE\primer-scratch"; git init`.
 
 ## A note on safety
 

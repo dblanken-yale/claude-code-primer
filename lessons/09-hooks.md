@@ -77,6 +77,13 @@ and the handler controls the outcome. To **deny** an action, print a JSON decisi
 Exiting with code `2` is an alternative that blocks the action and sends stderr
 back to Claude as feedback.
 
+> Platform note: the `command` strings above are written for **macOS/Linux** shells
+> (and use `jq` for the log example). On native Windows where Claude Code runs
+> commands through **PowerShell**, the hook *structure* is identical but the `command`
+> must be the PowerShell equivalent. If the user is on Windows, help them write the
+> PowerShell form (or have Claude generate it for their shell) rather than pasting the
+> bash version.
+
 ## Guided hands-on (optional)
 
 If the user wants a hook, the **block-destructive-command** hook above is the best
