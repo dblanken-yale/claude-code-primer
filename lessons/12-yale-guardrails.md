@@ -50,12 +50,6 @@ in any subagent or settings file.
 
 - Check or change your model with the **`/model`** command.
 
-## 4. MCP — not yet during the pilot
-
-As covered in the MCP lesson: MCP is valuable, but Yale hasn't approved a server list
-yet. Don't set up MCP servers for now; build with **skills** instead and revisit MCP
-once the institution gives guidance.
-
 ## Learn more (official docs)
 
 - Settings & permissions (for technical enforcement of limits):
@@ -65,6 +59,6 @@ once the institution gives guidance.
 
 ## Checkpoint
 
-Have the user recite the four guardrails back in their own words: medium-risk data
-ceiling, no secrets in prompts/files/workflows, any model except Fable, and no MCP
-servers yet. Update the checklist and offer Lesson 13 (Getting unstuck).
+Have the user recite the three guardrails back in their own words: medium-risk data
+ceiling, no secrets in prompts/files/workflows, and any model except Fable. Update 
+the checklist and offer Lesson 13 (Getting unstuck).
